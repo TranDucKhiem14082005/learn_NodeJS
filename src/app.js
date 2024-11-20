@@ -4,9 +4,6 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.get("/khiem", (req, res) => {
-    console.log("Client calling a API");
-    res.send("Hello World!");
-});
 
-module.exports = app;
+app.use("/v1/auth", require("./app/v1/routes"));
+module.exports = app; 
