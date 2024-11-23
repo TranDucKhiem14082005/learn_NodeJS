@@ -4,7 +4,7 @@ class authModel {
     createUser(username,password) {
        return users.push({username,password})
     }
-    getUser(username) {
+    getUser(username){
         return users.find((user) => user.username === username);
     }
 }

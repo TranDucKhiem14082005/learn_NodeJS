@@ -16,14 +16,11 @@ class authService {
         if(user) {
             return {
                 success: false,
-                message: "Username alrealy exists",
+                message: "Username already exits",
                 status: 400
-            }
+            };
         }
-
         authModel.createUser(username,password);
-
-        console.log("Access user create account");
         return {username, password};
     }
 
@@ -62,3 +59,6 @@ class authService {
 }
 
 module.exports = new authService();
+
+
+
