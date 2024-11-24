@@ -4,17 +4,17 @@ const authService = require("../serviecs/auth.serviecs");
 
 class authController {
     register(req, res){
-        const { username, password } = req.body;
-        const result = authService.register(username, password);
-        if(result.success === false) {
+        const {username,password} = req.body;
+        const result = authService.register(username,password);
+        if(result.success === false){
             return res.status(result.status).json({
                 message: result.message
-            });
+            })
         }
         return res.status(201).json({
-            message : "User created",
-            data:  result,
-        });
+            message: "Created success",
+            data: result
+        })
     }
     login(req, res) {
         const{username, password} = req.body;

@@ -2,9 +2,9 @@ const users = require("../../../data/dummy/auth.dummy");
 
 class authModel {
     createUser(username,password) {
-       return users.push({username,password})
+        return users.push({username,password});
     }
-    getUser(username){
+    getUser(username,password){
         return users.find((user) => user.username === username);
     }
 }
