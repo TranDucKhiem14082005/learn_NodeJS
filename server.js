@@ -40,7 +40,6 @@ app.post('/profile', (req, res) => {
         return res.json({ message: 'password is correct' }); 
     }
     return res.json({ message: 'password is incorrect' });
-
     console.log(email, password);
 
 })
